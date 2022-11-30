@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>jQuery test</title>
+<script src="jquery-1.6.4.min.js"></script>
+<script>
+$(document).ready(function(){
+//	$('div').hide(); //body태그안에 div태그를 불러와라
+	$('#sample1').hide(); //body태그안에 div태그를 구분한 id="sample1"을 불러와라
+	// hide(); 글을 숨겨주는 함수
+	$("#sample1").show(); //hide로 숨겼지만 다시 show함수로 보이게 했다.
+	$("#sample2").hide(); //id="sample2"를 숨겼다.	
+}); //CSS와 불러오는 방향이 반대이다.CSS는 id로 #을 불러오지만 JQuery는 #로 id를 불러온다.
+</script>
+</head>
+<body>
+<div id="sample1">이 div1를 지우고 싶다~~!!</div> <br>
+<div id="sample2">이 div2를 지우고 싶다~~!!</div>
+</body>
+</html>
+
+<!--
+var sample1 = document.getElementById("sample1");
+$("sample1");
+두 소스가 같은 의미 이다.
+ -->

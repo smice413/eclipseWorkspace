@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Ellipsis</title>
+    <style>
+        h1, p {
+            width: 300px;
+        }
+
+         .ellipsis {
+            white-space: nowrap; /* 줄바꿈 방지 효과  */
+            overflow: hidden;
+           /*  text-overflow: ellipsis; *//* 텍스트가 내용영역을 벗어날 정도로 길면 ...으로 나타나게 함 */  
+        } 
+    </style>
+</head>
+<body>
+    <h1 class="ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+    <p class="ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function fruit(){
+		var f1 = document.getElementById("f1");//input태그에 있는 id값인 f1을 구해와 var f1변수에 저장
+		var f1 = document.getElementById("f2");
+		var f1 = document.getElementById("f3");
+		var f1 = document.getElementById("f4");
+	
+		var s = "";
+		if(f1.checked == true) s += '사과'; //.checked 속성은 체크박스에 체크선택이 되었다면 true를 리턴함
+		if(f2.checked) s += '\n배'; //\n : 줄바꿈
+		if(f3.checked) s += '\n복숭아';
+		if(f4.checked) s += '\n수박';
+		
+		alert(s+"\n를 좋아하는 군요.");
+	}
+
+</script>
+</head>
+<body>
+<form>
+	좋아하는 과일을 선택하세요?<br>
+	<input type="checkbox" id="f1" checked="checked">사과
+	<!-- checked="checked" : 초기에 체크박스에 체크 된 상태로 하는 것 -->
+	<input type="checkbox" id="f2">배
+	<input type="checkbox" id="f3">복숭아
+	<input type="checkbox" id="f4">수박
+	<input type="button" value="확인" onClick="fruit()">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+		<title>sample14</title>
+		<script src="jquery-1.6.4.min.js"></script>
+
+		<script type="text/javascript">
+
+$(function(){
+
+	$("button").click(function(){
+	  //$(":checkbox").attr("checked","checked"); 
+		$(":checkbox").attr("checked", true); //checked 속성에 속성값을 checked대신 true로 해도 같은 결과가 나온다. 
+											  //즉, 버튼 클릭시 전부 체크가 됨
+	});
+
+	$(":reset").click(function(){
+		$(":checkbox").attr("checked",false); //reset버튼 클릭시 false로 리턴되는 의미는 체크박스의 체크가 전부 해제됨을 말함. 단, reset은 기본적으로 초기화 기능이 있기도 하다.
+	  //$(":checkbox").removeAttr("checked"); //removeAttr: attr속성을 해제한다는 의미로 체크가 다 해제됨.
+	});
+
+});
+
+		</script>
+	</head>
+	<body>
+<!-- <form> -->	
+스킬:
+<input type="checkbox" name="xhtml" value="XHTML" id="xhtml"/> <!-- checked="checked" : input태그에 넣으면 초기 체크된 상태 표시 -->
+<label for="xhtml">XHTML</label>
+
+<input type="checkbox" name="css" value="CSS" id="css" />
+<label for="css">CSS</label>
+
+<input type="checkbox" name="javascript"
+value="JavaScript" id="javascript" />
+<label for="javascript">JavaScript</label>
+
+<input type="checkbox" name="php" value="PHP" id="php" />
+<label for="php">PHP</label>
+<!-- </form> -->
+<p><button> 전부체크</button></p> <!-- 전부체크 버튼 생성 --> <!-- type=button을 하지 않으면 기본 버튼 태그는 submit기능이 있다. 따라서 form안에 input태그가 작성되면 실행되지 않는다.  -->
+   <!-- <button type="button"> 전부체크</button> -->
+   <input type="reset" value="전부 해제"> <!-- 전부 해제 reset버튼 생성 -->
+
+	</body>
+</html>

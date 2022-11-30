@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function check(){
+		var sel = document.getElementById("sel");
+		
+	    if(sel.value == ""){
+			alert("색깔을 선택 하세요.");
+			return false;
+		}
+		
+		document.bgColor = sel.value;
+	}
+	
+</script>
+</head>
+<body>
+<form>
+	<h3>좋아하는 색깔을 선택하세요?</h3>
+	<select id="sel" onChange="check()"> <!-- onChange는 클릭 이벤트가 아니기 때문에 목록에서 선택하면 바로 바뀜 -->
+		<option value="">색깔선택</option>
+		<option value="red">빨강</option>
+		<option value="blue">파랑</option>
+		<option value="yellow">노랑</option>
+		<option value="skyblue">하늘색</option>
+		<option value="orange">오렌지</option>
+		<!-- <option value="orange" selected="selected">오렌지</option> -->
+		<!-- selected="selected" 초기화면에서 선택되어 있게하는 것 checked와 같은 기능 -->
+	</select>
+	<input type="button" value="확인" ><!-- onClick="check()": 목록에서 클릭하고 확인 누루면 배경색 바뀜 -->
+</form>
+</body>
+</html>

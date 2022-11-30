@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+		<title>sample12</title>
+		<script src="jquery-1.6.4.min.js"></script>
+
+		<script type="text/javascript">
+
+$(function(){
+
+	$(":radio").click(function(){ // :radio : type 값이 radio인 태그를 모두 구해와라.
+		$("label").css("font-weight","");  //새로운 radio 버튼을 선택하면 모든 굵게 설정된 것을 지우겠다는 의미
+		$("label[for='"+$(this).attr("id")+"']").css("font-weight","bold");
+		// [for='"+$(this).attr("id")+"'] : label for값과 radio버튼 id값이 같으면 bold(굵은글씨)를 적용하겠다.
+		// 즉, for값과 id값의 명칭을 똑같이 하는 이유가 여기에 있다.
+	});
+
+	$("label").click(function(){
+		$("label").css("font-weight",""); //label의 굵기를 null값으로 초기화시킴
+		$(this).css("font-weight","bold"); //label을 클릭하면 굵게 만듬
+	});
+
+});
+
+		</script>
+	</head>
+	<body>
+		성별:
+		<input type="radio" name="gender" 
+		value="남자" id="gender_man" />
+		<label for="gender_man">남자</label>
+
+		<input type="radio" name="gender" 
+		value="여자" id="gender_woman" />
+		<label for="gender_woman">여자</label>
+
+	</body>
+</html>

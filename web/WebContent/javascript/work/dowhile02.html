@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+	// 키보드로 수식(ex. 10+20)을 받아서 연산결과를 출력하는 프로그램을 작성하세요?
+			
+	do{
+		// s = "10+20";
+		var s = prompt("수식을 입력하세요?(종료하려면 0을 입력)","");
+		
+		if(s == 0) break;
+		
+		// eval() : 문자 형식의 수식을 연산 해주는 함수
+		// eval("10+20") --> 30
+		document.write(s+"의 결과는  "+ eval(s) +"<br>");
+		//prompt 창이 2번 뜨는 이유는 document.write창보다 우선순위이기 때문이다.
+		//break;
+	}while(true); //무한루프
+</script>
+
+
+
+
+</body>
+</html>

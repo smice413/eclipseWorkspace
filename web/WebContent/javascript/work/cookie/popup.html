@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+   <TITLE>pop.html</TITLE>
+   <meta charset="UTF-8">
+   <SCRIPT LANGUAGE="JavaScript" src="Cookie.js">
+   </SCRIPT>
+   <SCRIPT LANGUAGE="JavaScript">
+   <!-- HIDE FROM OTHER BROWSER
+/*      function settingCookie() { 
+         setCookie('EVENT20010101','yes',1000,'/'); 
+      }	
+
+   // STOP HIDING -->
+
+*/
+
+	function setCookie( name, value, expiredays ) {
+	      var todayDate = new Date();
+	      todayDate.setDate( todayDate.getDate() + expiredays );
+	      document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+	}
+	  
+	function closeWin(){ 
+	      if(document.form1.Cookiechk.checked ) 
+	           setCookie( "Notice", "done" , 1); //변수명, "done"값(임의의 값이다) , 1일
+	           self.close(); 
+	}
+
+   </SCRIPT>
+</HEAD>
+<BODY BGCOLOR="white">
+   <CENTER>
+   <FORM name=form1 method='post' action="">
+   <H2> 이벤트 페이지 </H2>
+   <HR>
+   체크를 하고 "닫기"를 선택하면 지정한 시간동안 이 창이 다시 뜨지 않습니다.	
+   <HR>
+   <BR>
+   <INPUT type='checkbox' name='Cookiechk' value='안뜨기'>
+   <INPUT type='Button' name='Button1'  value='닫기' onClick=closeWin()>
+   </FORM>
+   </CENTER>
+</BODY>
+</HTML>

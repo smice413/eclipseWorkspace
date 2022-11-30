@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>표연습</title>
+</head>
+<body>
+
+<!-- 
+table : 테이블 생성
+tr : 행(row)을 정의
+td : 열(column)을 정의
+
+cellspacing 속성:셀과 셀사이의 간격을 설정할 때 사용하는 것(경계선의 두께)
+cellpadding 속성:셀의 테두리와 셀 안의 내용간의 간격 설정
+
+th및 tr과 td 태그 안에서만 쓰는 행.열을 합치는 속성
+colspan 속성: 열을 합치는 속성으로 값에 따라 열갯수가 합쳐진다
+rowspan 속성: 행을 합치는 속성으로 값에 따라 행갯수가 합쳐진다
+-->
+
+<!-- 1행 1열 테이블 생성 -->
+
+<!-- border 값의 숫자가 커질수록 테두리가 두꺼워짐 , bgcolor는 셀의 배경색 설정-->
+<table border=10 width=200 height=200 align="center"
+									 bgcolor="yellow"
+									 cellspacing=10
+									 cellpadding=50>  
+	<tr>
+		<td> 1 </td>
+	</tr>
+</table>
+<br>
+
+<!-- 1행 3열 테이블 생성 -->
+<table border=1 width=300 height=200 align="center">
+	<tr align="center"> <!-- 행안에 있는 모든 열의 내용이 가운데 정렬되었다 -->
+		<td>호랑이</td>
+		<td>사자</td>
+		<td>원숭이</td>
+	</tr>
+</table>
+<br>
+
+<!-- 3행 1열 테이블 생성 -->
+<table border=1 width=200 hetght=300 align="center">
+	<tr align="center"><td>호랑이</td></tr>
+	<tr align="center"><td>사자</td></tr>
+	<tr align="center"><td>원숭이</td></tr>
+</table>
+<br>
+
+<!-- colspan 속성 : 열합치기 
+1. colspan 속성은 td, th 태그 안에서만 사용할 수 있다. <td colspan=3>은 3개의 열을 합치라는 의미
+2. colspan 속성값은 몇개의 열을 합치는가에 따라서 숫자를 지정한다.
+-->
+<!-- 1행은 1열로 만들고 2행은 3열로 만드는 법 -->
+<table border=1 width=300 height=200 align="center">
+	<tr align="center">
+		<td colspan=3>동물</td>
+	</tr>
+	<tr align="center">
+		<td width=300>호랑이</td> <!-- width=300은 글자수에 따라 크기가 다른 셀의 크기를 똑같이 맞추기 위함 -->
+		<td width=300>사자</td>
+		<td width=300>원숭이</td>
+	</tr>
+</table>
+<br>
+
+<!-- 1행 2열로 2행 6열로 만드는 법  -->
+<table border=1 width=300 height=200 align="center">
+	<tr align="center">
+		<td colspan=3>동물</td> <!-- 3개의 열이 합쳐짐 -->
+		<td colspan=3>꽃</td>   <!-- 3개의 열이 합쳐짐 -->
+	</tr>
+	<tr align="center">
+		<td>호랑이</td>
+		<td>사자</td>
+		<td>원숭이</td>
+		<td>장미</td>
+		<td>백합</td>
+		<td>민들레</td>
+	</tr>
+</table>
+<br>
+
+<!-- rowspan 속성 : 행(row)합치기 
+1. rowspan 속성은 행(row)을 합칠때 사용한다.
+2. rowspan 속성은 td, th 태그 안에서만 사용할 수 있다. <td rowspan=2> 2개의 행을 합쳐라
+3. rowspan 속성값은 몇개의 행을 합치는가를 숫자로 지정한다.
+   rowspan=2 : 2개의 행을 합치라는 의미
+-->
+
+<!-- 1행1열과 3행 2열 만들기 -->
+<table border=1 width=200 height=300 align="center">
+	<tr align="center">
+		<td rowspan=3>동물</td> <!-- 행을 한번만 합쳐주고 밑에 행과 열을 새로 작성하면 2열로 넘어가서 행을 생성한다 -->
+		<td>호랑이</td>
+	</tr>
+	<tr align="center">
+		<td>사자</td>
+	</tr>
+	<tr align="center">
+		<td>원숭이</td>
+	</tr>
+	<tr align="center">
+		<td rowspan=3>꽃</td> <!-- 행을 한번만 합쳐주고 밑에 행과 열을 새로 작성하면 2열로 넘어가서 행을 생성한다 -->
+		<td>장미</td>
+	</tr>
+	<tr align="center">
+		<td>백합</td>
+	</tr>
+	<tr align="center">
+		<td>민들레</td>
+	</tr>
+</table><br>
+
+
+</body>
+</html>

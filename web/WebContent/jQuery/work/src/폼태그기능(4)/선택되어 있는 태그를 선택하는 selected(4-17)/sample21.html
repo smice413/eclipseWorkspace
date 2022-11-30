@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+		<title>sample21</title>
+		<script src="jquery-1.6.4.min.js"></script>
+
+		<script type="text/javascript">
+// 연령을 "10대" 로 선택하면 "좋아하는 술" 입력란이 입력 불가 상태가 됨
+
+$(function(){
+
+	$("select").change(function(){ //select태그로 구해온다. option태그로 구해오면 안된다.
+//		if($(":selected").attr("value")=="10 대"){ //:selected : select태그가 붙어 있는 선택된 태그(option태그)를 구해옴
+		if($("select").val()=="10 대"){           //"10 대" 의 띄어쓰기까지 주의해야함.value값을 띄어쓰기 까지 똑같이 써야함. 	
+			$("input").attr("disabled", "disabled"); //10대를 선택하면 text입력란을 비활성화 시킨다는 의미
+//			$("input").attr("disabled", "false");	 //비활성화
+//			$("input").attr("readonly", "readonly"); //포커스는 들어가지만 읽기전용이라 작성 못하게 할 수 있다.
+		}else{
+			$("input").removeAttr("disabled");
+//			$("input").removeAttr("readonly"); //if문에서 readonly를 선언했으면 else문에서도 readonly 써야함. 
+		}
+	});
+
+});
+
+		</script>
+	</head>
+	<body>
+<p> 나이：
+<select name="age">
+<option value=" 선택해주세요"> 선택해주세요</option>
+<option value="10 대">10 대</option>
+<option value="20 대">20 대</option> <!-- selected="selected" 는 초기 선택 상태 만드는 것 -->
+<option value="30 대">30 대</option>
+<option value="40 대이상">40 대이상</option>
+</select></p>
+<p> 좋아하는 술：<input type="text" /></p>
+
+	</body>
+</html>

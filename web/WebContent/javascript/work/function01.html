@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 정의 함수</title>
+<script>
+	// 사용자 정의 함수
+	function check(){ 		//함수명은 대.소문자를 구분한다.
+		alert("함수 호출 성공");
+	}
+</script>
+
+</head>
+<body>
+
+<!-- 방법1. 함수 호출 -->
+<script>
+//	check(); 	//함수 호출
+//	CHECK(); 실행안됨. 대소문자 구분함
+</script>
+
+<!-- 방법2. 이벤트를 이용해서 함수 호출  !!!가장 많이 씀-->
+<input type="button" value="함수호출" onClick="check()"><!-- 이벤트 핸들러(onClick)은 대소문자 구분X -->
+
+<!-- 
+* 이벤트
+   Click 이벤트 : 버튼을 클릭
+   Submit 이벤트 : submit버튼을 클릭할때
+   MouseOver 이벤트 : 컴포넌트(그림)위에 마우스 포인터를 
+	                  올렸을때
+   MouseOut 이벤트 : 컴포넌트(그림)위에서 마우스 
+		     포인터가  벗어났을때
+   Load 이벤트 :  문서가 웹브라우저에 불려질때 
+   Unload 이벤트 : 웹브라우저가 해당 문서를 벗어났을때
+   Focus 이벤트 : 입력양식 필드로 포커스가 들어왔을 때
+   Blur 이벤트 : 입력양식에서 포커스가 벗어났을때
+   Keyup 이벤트 : 키를 눌렀다가 놓았을때
+   Change 이벤트 : 값의 변화가 발생할때
+
+* 이벤트 처리순서
+   1. 각 컴퍼넌트에 발생한 이벤트 종류를 파악
+       ex) Click, Focus, Blur, Load, MouseOver, MouseOut
+
+   2. 각 이벤트명에다 on을 붙여서 이벤트 핸들러를 생성(대소문자 구분X)
+       ex) onClick,  onFocus, onBlur, onLoad...
+
+   3. 이벤트 핸들러를 이용해서 함수를 호출한다.
+       ex) <input type=button value="회원가입" onClick="check()">
+ -->
+
+</body>
+</html>

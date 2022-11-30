@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+	/* var result = window.confirm("정말로 삭제 하시겠습니까?"); */
+	//confirm()는 중요한 결정을 사용자에게 물어볼때 쓰는 함수이다.
+	var result = confirm("정말로 삭제 하시겠습니까?");//alert()와 달리 확인과 취소가 둘다 뜸
+	//alert(result);//confirm의 결과를 확인으로 result를 돌려주면 alert의 결과로 true가 뜨고
+				    // 취소를 누루면 false가 뜬다.
+	if(result){
+		alert("삭제 성공");
+	}else{
+		alert("삭제 취소");
+	}			
+				
+</script>
+
+
+</body>
+</html>

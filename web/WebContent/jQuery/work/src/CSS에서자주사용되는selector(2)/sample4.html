@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<title>sample4</title>
+		<meta charset="utf-8">
+		<script src="jquery-1.6.4.min.js"></script>
+
+		<script type="text/javascript">
+		$(document).ready(function(){
+//		$(function(){
+			$(".first strong").css("color","red");
+			//$(".first strong") : 띄어쓰기 있을 때는 자손 태그를 의미함
+			// 즉, 클래스값이 first인 li태그의 자손 태그인 strong 태그만 불러 오라는 의미
+		});
+
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li class="first"><strong> 텍스트 </strong> 텍스트 텍스트 텍스트 텍스트 </li>
+			<li class="second"><strong> 텍스트 </strong> 텍스트 텍스트 텍스트 텍스트 </li>
+			<li class="third"><strong> 텍스트 </strong> 텍스트 텍스트 텍스트 텍스트 </li>
+			<li class="fourth"><strong> 텍스트 </strong> 텍스트 텍스트 텍스트 텍스트 </li>
+		</ul>
+
+	</body>
+</html>

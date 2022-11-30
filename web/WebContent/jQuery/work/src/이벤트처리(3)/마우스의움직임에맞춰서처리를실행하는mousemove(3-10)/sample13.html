@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+		<title>sample13</title>
+		<script src="jquery-1.6.4.min.js"></script>
+
+		<script type="text/javascript">
+// img태그 위에 마우스포인터가 움직이는 경우에 마우스 포인터의 x좌표와 y좌표를
+// p태그에 출력하는 스크립트.
+
+$(function(){
+
+	$("img").mousemove(function(e){
+		$("p").html("현재 X좌표:"+e.clientX+
+				    "<br>현재 Y좌표:"+e.clientY);
+		//.html() : p태그 요소의 내용을 html괄호 안에 있는 내용으로 바꾼다.따라서 <br>태그가 따옴표안에 들어갈 수 있다.
+		// text()와 비슷하지만 text()함수는 태그까지 저장하지 못함
+	});
+
+});
+		</script>
+	</head>
+	<body>
+		<img src="flower.jpg" title="꽃" />
+		<p></p>
+	</body>
+</html>

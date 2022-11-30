@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	// 현재 년, 월, 일, 시, 분, 초, 요일을 구하는 프로그램 작성
+	
+	var t = new Date();		//Date객체 t 생성
+	//alert(t); //Wed Feb 16 2022 16:48:16 GMT+0900 (한국 표준시)
+	
+	var y = t.getFullYear(); //년
+	document.write(y+"<br>");        //2022
+	var m = t.getMonth()+1;  //월(0~11)
+	var d = t.getDate();	 //일
+	
+	var h = t.getHours();    //시간
+	var mm = t.getMinutes(); //분
+	var s = t.getSeconds();	 //초
+	var w = t.getDay();		 //요일(0~6)	
+	
+	var week = ['일','월','화','수','목','금','토'];
+	
+	document.write(y+"-"+m+"-"+d+" "+h+":"+mm+":"+s+"  ");
+	//document.write(w);		//w = 3 : 수요일
+	document.write(week[w]+"요일");
+	
+</script>
+</body>
+</html>

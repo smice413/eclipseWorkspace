@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>jQuery test</title>
+<!--
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"   ></script>-->
+<script src="jquery-1.6.4.min.js"></script>
+<script>
+jQuery(document).ready(function(){
+//$(function(){ //웹 페이지의 로딩이 완료된 다음에 안에 쓰여진 코드를 
+			  // 실행한다는 의미
+	jQuery('#sample1').hide(); //첫 화면에 글이 나타나지 않음
+
+	/* $("button").click(function(){
+				$("#sample1").show();
+//				alert("글자 출력됨");
+			}); */
+		$("#b1").click(function(){	// 출력 버튼 클릭	(.click()함수) 	
+			$('div').show(); //첫 화면에 나타나지 않았던 div태그 글이 출력 버튼 클릭 후 나타남
+		});
+			
+		$("#b2").click(function(){		// 숨기기 버튼 클릭(.click()함수)	
+			$("div").hide();//출력 버튼 클릭 후  화면에 나타난 글이 숨기기 버튼 클릭후 숨겨짐. 
+		});	
+			
+});
+
+
+$(document).ready(function(){
+
+});
+
+$(function(){
+
+});	
+</script>
+</head>
+<body>
+
+	<div id="sample1">이 div를 지우고 싶다~~!!</div>
+	div태그 안에 들어 있는 내용이 지워 졌어요.<br><br>
+	<button type="button" id="b1">출력</button>
+	<button type="button" id="b2">숨기기</button>
+
+</body>
+</html>
+
+<!--
+
+$(document).ready(function(){
+	$('#sample').hide();
+});
+
+
+코드를 줄여서 사용하면
+$(function(){
+	$('#sample1').hide();
+});
+
+-->

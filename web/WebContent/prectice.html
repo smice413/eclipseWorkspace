@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(function(){
+		$("#guguform").submit(function(){
+			if($("#num").val() == ""){
+				alert("구구단을 선택하세요");
+				return false;
+			}
+		});
+	});
+</script>
+
+</head>
+<body>
+<h1>보고싶은 구구단은?</h1>
+<form id="guguform" method="post" action="practice1.jsp" >
+	<select id="num" name="num">
+		<option value="">몇단</option>
+	 	<option value="2">2</option>
+	 	<option value="3">3</option>
+	 	<option value="4">4</option>
+	 	<option value="5">5</option>
+	 	<option value="6">6</option>
+	 	<option value="7">7</option>
+	 	<option value="8">8</option>
+	 	<option value="9">9</option>
+	</select>
+	
+	<p><input type="submit" id="gugu" name="gugu" value="확인"></p>
+</form>
+</body>
+</html>

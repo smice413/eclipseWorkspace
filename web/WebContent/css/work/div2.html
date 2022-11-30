@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<TITLE>범위 안에서 스타일 지정</TITLE>
+<STYLE TYPE="text/css">
+DIV.color { /* DIV 태그 안에서만 class 속성을 불러 올 수 있는 태그양식이다. */
+	color: tomato
+}
+.style {
+	font-style: italic
+}
+</STYLE>
+</HEAD>
+<BODY BGCOLOR="white">
+	<CENTER>
+		<h2 class="color">css 적용하기</h2> <!-- DIV안이 아니기 때문에 class="color"가 적용안됨 -->
+		<H1>
+			<DIV class="color">
+				전체 범위 안에서 색 지정<BR> <SPAN class="style">범위 안에서 이탤릭으로 지정</SPAN>
+			</DIV>
+		</H1>
+	</CENTER>
+</BODY>
+</HTML>

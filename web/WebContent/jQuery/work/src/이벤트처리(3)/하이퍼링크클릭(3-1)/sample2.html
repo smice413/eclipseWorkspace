@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+		<title>sample2</title>
+		<script src="jquery-1.6.4.min.js"></script>
+
+		<script type="text/javascript">
+
+		$(function(){
+			$("a").click(function(){ //링크가 연결된 text클릭하여 이미지 변경
+				$("img").attr("src","sea.jpg")
+						.attr("title"," 바다");
+				alert("이미지 변경");
+			});
+		});
+
+		</script>
+	</head>
+	<body>
+	
+	<a href="sea.jpg">화면을 변경</a> <!-- 링크가 연결되어 있는 text -->
+	<!-- 앵커태그로 링크가 걸린 이미지를 수정하지 않고 나오지 않게 하는 방법은 sample3,4에 있다. -->
+	<p><img src="flower.jpg" title="꽃" /></p>
+	
+	</body>
+</html>

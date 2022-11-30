@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>앵커(anchor) 태그</title>
+</head>
+<body>
+
+<!-- 텍스트에 하이퍼링크 설정 -->
+<!-- 도메인의 .com, .net 뒤에 index.html, index.css 등의 확장자 파일이 감춰저 있다.
+ 이유는 서버와 연결하기 위해 홈index 파일이 반드시 필요하기 때문이다.
+ 단지 파일이 다운로드 안되고 자동처리 되는 이유는 브라우저가 .html확장자 파일을 자동으로 실행되게 되어 있기 때문이다.
+ 이외에는 브라우저가 자동으로 처리 못함.따라서 다운로드가 됨  -->
+<a href="http://www.naver.com" style="text-decoration:none">네이버</a> <br><br>
+<!-- http:// 이것이 반드시 있어야한다., 텍스트에 밑줄이 생기는 것은 CSS로 지울 수 있다.
+  								  style 속성에 text-decoration속성을 써야한다
+  								  :none은 밑줄X--> 
+<a href="http://www.daum.net" style="text-decoration:none">다음</a> <br><br>
+<a href="http://www.nate.com">네이트</a><br><br>
+
+<!-- first.html 문서에 링크 -->
+<a href="first.html">처음 작성한 문서로 이동</a> <br><br>
+
+<!-- 다운로드 -->
+<a href="html.hwp">다운로드</a> <br><br> 
+<!-- 브라우저가 hwp 확장자 파일을 처리 못하기 때문에 다운로드가 됨 -->
+
+
+<!-- 이미지에 하이퍼링크 설정 -->
+<a href="http://www.seoul.go.kr">
+	<img src="img/Tulips.jpg" width=100 height=100>
+</a>
+<br><br><br><br><br><br>
+
+<!-- 방송국 로고(이미지)를 클릭해서 각 방송국 사이트로 이동 -->
+<a href="http://www.kbs.co.kr">
+	<img src="img/kbs.png" width=100 height=100 title="KBS"> <br><br>
+</a>	
+<a href="http://www.imbc.com">
+	<img src="img/mbc.jpeg" width=100 height=100 title="MBC"> <br><br>
+</a>
+<a href="http://www.sbs.co.kr">
+	<img src="img/sbs.png" width=100 height=100 title="SBS"> <br><br>
+</a>	
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- * 자바 스크립트 배열
+
+1.
+   str=new Array();
+   str[0]=80;
+   str[1]=90;
+   str[2]=70;
+
+2.
+  str=new Array(80,90,70);
+
+3.
+  str=[80,90,70]; -->
+
+<script>
+	// 배열을 활용하는 for문
+	var col=['red','orange','yellow','green','blue','navy','purple'];
+	var f = ['고딕','명조','궁서','바탕','돋움','견고딕','새고딕']
+	
+	for(var i=1; i<=7; i++){
+		document.write("<font size="+i+	  //""안에 태그를 넣어라
+				"		color="+col[i-1]+ //"와 속성이 띄어쓰기 되어야 정상 실행됨
+				"		face="+f[i-1]+
+				">자바스크립트</font><br>");
+	}
+
+</script>
+
+
+
+
+</body>
+</html>

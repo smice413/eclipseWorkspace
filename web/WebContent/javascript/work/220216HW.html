@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 과제. 
+       구구단(2~9단)을 열방향(세로방향)으로 출력 하는        
+       프로그램을  작성하세요?
+        (테이블 태그를 사용해서 처리하세요)
+ -->
+<style>
+ td{padding:10px;}
+</style>
+</head>
+<body>
+<table border=1 align="center" padding="10">
+	<caption><font size="4" color="skyblue">구</font><font size="7" face="궁서">구</font><font size="2" color="beige">단</font></caption>
+	<tr align="center">
+		<script>
+		var col = ['yellow','orange','lightyellow','lightgreen','lightblue','lightgray','violet', 'lightpink'];
+		var clr = ['lightblue','steelblue','black','gray','mistyrose','beige','aqua','olivedrab'];
+			for(var dan = 2; dan<=9; dan++){
+				document.write("<td bgcolor="+clr[dan-2]+">"+"<font color ="+col[dan-2]+">"+dan+"단</td>");
+			}	
+		</script>
+	</tr>
+	<tr>
+		<script>
+			for(var dan = 2; dan<=9; dan++){
+			document.write("<td bgcolor="+col[dan-2]+">");
+				for(var i = 1; i<=9; i++){
+					document.write(dan+"*"+i+"="+dan*i+"<br>");
+				}
+			document.write("</td>");	
+			}	
+		</script>
+	</tr>
+</table>
+</body>
+</html>

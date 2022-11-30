@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  				<!-- jquery를 호출함 그래서 밑에 jquery함수를 작성할 수 있다. -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-3"> <!-- mt-3는 margin top값을 3 주겠다는 의미 -->
+  <h2>Filterable Table</h2>
+  <p>Type something in the input field to search the table for first names, last names or emails:</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br> <!-- id="myInput"은 input 태그와 jquery에서 사용하는 id 값을 구분하기 위한 것이며 jquery를 위해 작성함 -->
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@mail.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@greatstuff.com</td>
+      </tr>
+      <tr>
+        <td>Anja</td>
+        <td>Ravendale</td>
+        <td>a_r@test.com</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
+</div>
+
+<!-- jquery 라이브러리 호출을 했기 때문에 함수($)를 작성함 -->
+<script> 
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {/* #myInput은 위의 input태그의 값들을 구해와라, .on은 이벤트 처리이고 keyup은 키보드를 누르고 손을 때는 순간 발생하는 이벤트이다. */
+    var value = $(this).val().toLowerCase();/* .toLowerCase();은 소문자로 변환해라는 의미 */
+    $("#myTable tr").filter(function() {/* #myTable tr은 위의 myTable의 tr태그의 값을 구해와라 */
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</body>
+</html>

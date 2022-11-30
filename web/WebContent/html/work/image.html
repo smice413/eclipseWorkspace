@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지 연습</title>
+</head>
+<body>
+
+<!-- 이미지 불러오기 -->
+<!-- 상대 경로
+** ./은 현재 폴더, ../상위 폴더를 의미함
+1. 같은 디렉토리(폴더) 안에 있는 이미지 불러오기: <img src="./Koala.jpg">
+2. 하위 디렉토리(img) 안에 있는 이미지 불러오기 : <img src="img/Koala.jpg">
+3. 상위 디렉토리에 있는 이미지 불러오기: <img src="../Koala.jpg">
+ -->
+
+
+<img src="img/Koala.jpg" width=200 height=200 title="코알라 이미지">
+<br><br> 
+<!-- img 태그의 scr 속성: 소스라는 의미 -->
+<!-- 상대경로(상대적 위치에 따라 불러온것):img폴더에 Koala.jpg파일 불러옴  -->
+<!-- 이미지 절대크기(픽셀): 가로 200 세로 200 -->
+<!-- title="코알라 이미지"은 이미지 위에 마우스 가져두면 말풍선 설명이 뜸. ""반드시 써야함
+          얘전에는 title이라고 안하고 alt라고 했었다.-->
+
+
+<!-- 이미지 정렬  -->
+<!-- 1. 왼쪽 정렬 -->  <!-- align 속성이 생략되더라도 기본적으로 왼쪽 정렬임  -->
+<img src="img/Penguins.jpg" width=150 height=150 align=left>
+<br><br><br><br><br><br><br><br><br>
+
+<!-- 2. 가운데 정렬 -->
+<img src="img/Penguins.jpg" width=150 height=150 align=center>
+<br><br><br><br>		<!-- 위의 방식으로 가운데 정렬X -->
+
+<p align="center">      <!-- p 태그와 align 속성으로 가운데 정렬 가능  -->
+<img src="img/Penguins.jpg" width=150 height=150>
+</p>
+
+<center> 				<!-- center 태그로 가운데 정렬 가능  -->
+<img src="img/Penguins.jpg" width=150 height=150>
+</center>
+
+
+<!-- 3. 오른쪽 정렬 -->
+<img src="img/Penguins.jpg" width=150 height=150 align=right>
+<br><br><br><br><br><br><br><br><br>
+
+
+<!-- 이미지와 텍스트 같이 출력  -->
+<img src="img/Desert.jpg" width=150 height=150 align="top">사막이미지
+<br><br>									   <!-- 텍스트(글자)가 사진 위에  -->
+<img src="img/Desert.jpg" width=150 height=150 align="middle">사막이미지
+<br><br>									   <!-- 텍스트가 사진 가운데 -->
+<img src="img/Desert.jpg" width=150 height=150 align="bottom">사막이미지
+<br><br>									   <!-- 텍스트가 사진 아래 -->
+
+</body>
+</html>

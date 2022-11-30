@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 
+	변수 : 메모리상에 데이터를 저장하는 기억공간
+	형식 : var 변수명 = 값(데이터);
+ -->
+
+<script>
+	//1. 숫자 데이터
+	var num = 10; //자료형을 안쓰기 때문에 숫자가 정수이기 때문에 정수형임.크게 보면 숫자형임
+	var pi = 3.14;//숫자가 실수이기 때문에 실수형임.크게 보면 숫자형임
+	document.write("num=", num+"<br>"); //자바스크립트는 ,도 되고 +로 이어도 된다.파이썬은 ,만 가능
+	document.write("pi="+ pi+"<br>"); //자바스크립트는 ,도 되고 +로 이어도 된다.파이썬은 ,만 가능
+	document.write(typeof(num)+"<br>"); //typeof() : 데이터가 숫자형(number)변수인지 문자형(string)변수인지 알려주는 함수
+
+	//2. 문자 데이터
+	var str1 = '자바스크립트';
+	var str2 = "javascript";
+	document.write("str1=", str1+"<br>");
+	document.write("str2="+ str2+"<br>");
+	document.write(typeof(str1)+"<br>"); //string
+	document.write(typeof(str2)+"<br>"); //string
+	
+	//3. 논리 데이터
+	var b1 = true; //소문자로 true를 쓰지만 파이썬은 True로 써야함
+	var b2 = false;
+	document.write("b1="+b1+"<br>");
+	document.write("b2="+b2+"<br>");
+	document.write(typeof(b1)+"<br>"); //boolean
+	document.write(typeof(b2)+"<br>"); //boolean
+	
+	//4. null 데이터
+	var str = null;
+	document.write("str="+str+"<br>"); //null
+	document.write(typeof(str)+"<br>"); //object(객체라는 의미)
+	
+	var result = 30;
+	var result = "자바스크립트";
+	document.write("result="+result); //자바스크립트(자료형을 안쓰기 때문에 가장 마지막에 할당된 값을 출력)
+	
+	
+	
+	</script>
+
+
+
+</body>
+</html>

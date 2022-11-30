@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 1. Math.random() 을 이용해서 1~45 사이의 난수를 6개            
+                 추출 하는 프로그램을 작성하세요.
+
+        (조건 1.중복 되지 않는 값을 구해야함.
+            2.구해진 값을 오름차순으로 정렬해서 출력) 
+ -->
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	var ran = new Array(6);
+	
+	for(var i=0; i<ran.length; i++){
+	ran[i] = Math.ceil(Math.random()*45);
+		for(var j=0; j<i; j++){
+			if(ran[i] == ran[j]){
+				i--;
+				break;
+			}
+		}
+	
+	}
+	//sort() 함수는 문자값은 정렬이 되지만, 숫자값은 a,b함수선언을 해서 정렬해야한다.
+	 /* var ran1 = ran.sort(function(a,b){
+		if(a > b) return 1; //양수값을 주면서 순서를 바꿈
+		if(a == b) return 0; // 0과 음수 값은 순서를 바꾸지 않음
+		if(a < b) return -1;
+	}); */
+	var ran1 = ran.sort(function(a,b){
+		return a-b; //a-b: 오름차순 정렬 b-a: 내림차순 정렬
+	});
+	document.write(ran1);
+	
+		
+</script>
+</body>
+</html>

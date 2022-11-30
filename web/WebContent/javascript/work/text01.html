@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>text객체</title>
+<script>
+	function id_focus(){	// focus 이벤트
+		var id = document.getElementById("id");
+		id.value = "";
+	}
+	function id_blur(){		// blur 이벤트
+		var id = document.getElementById("id");
+		id.value = id.defaultValue; // defaultValue = "아이디 입력"
+	}
+	function passwd_focus(){	// focus 이벤트
+		var passwd = document.getElementById("passwd");
+		passwd.value = "";
+	}
+	function passwd_blur(){		// blur 이벤트
+		var passwd = document.getElementById("passwd");
+		passwd.value = passwd.defaultValue; // defaultValue = "비밀번호 입력"
+	}
+</script>
+
+</head>
+<body>
+<form> <!-- 한꺼번에 서버쪽에 전달해야할 데이터가 많을 때 form객체 사용 -->
+	아이디 : <input type=text id="id" value="아이디 입력"
+				  onFocus="id_focus()" onBlur="id_blur()"> <br>
+	비밀번호 : <input type=text id="passwd" value="비밀번호 입력"
+				  onFocus="passwd_focus()" onBlur="passwd_blur()"> <br>
+</form>
+</body>
+</html>

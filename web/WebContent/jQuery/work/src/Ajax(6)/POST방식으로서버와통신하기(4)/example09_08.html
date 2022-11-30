@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>$.ajax로 jsp 파일 로드하기</title>
+<style>
+td {
+  border: 1px solid gray;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+/*
+	- $.post() 함수는 post방식으로 서버와 통신하는 jQuery 함수이다.
+    - $.post() 함수는 서버의 welcome.jsp 페이지를 post방식으로 요청한다.
+*/
+
+$(function() {
+    $('#submit').click(function () {
+            var username = $('.username').val();	// 서버로 보낼 데이터를 입력창에서 얻어온다.
+            var sendData = 'username=' + username;  // 입력창에서 입력받은 데이터를 문자열 형식으로 변환한다. 'username='은 임의로 설정한것.
+            
+				//$.post("요청할 파일명", "전달할 데이터", "콜백함수");            
+                //$.post("welcome.jsp",sendData, function(){});
+                $.post(									// 문자열 형식의 데이터(=sendData)를 welcome.jsp 파일로 보낸다.
+                 "welcome.jsp",						// 서버의 welcome.jsp 에서는 받은 데이터를 인사말을 덧붙여서 돌려준다.
+                  sendData,        
+                  function (msg) {					// 콜백함수는 서버에서 보내온 데이터를 매개변수로 얻어온다.
+                	alert(msg);
+            	    $('#message').html(msg);			// 서버로부터 받은 데이터를 id가 message인 엘리먼트에 설정한다.
+                });    
+            
+                
+            	/* $.ajax({
+            		url :"welcome.jsp",
+            		type :"post",
+            		data : {"username": username}, //key값과 value값으로 설정한 것이다. key값의 "username"은 임의로 넣은것으로 name또는 class속성값과 상관없다.
+            									   //단지, welcome.jsp에 값을 전달하기 위해 "username"으로 작성했기 때문에 jsp에서 값을 받기 위한 같은 변수명을 작성한것.
+            									   //value값은 위의 var username과 같다.
+            		success : function(msg){	   //바로 위에서 welcome.jsp로 전달된 값으로 출력되는 전체내용이 콜백함수로 돌려 받아와져서 .html()함수를 거쳐 div태그 사이에 문구로 출력되도록 한다. 
+            			alert(msg);
+            			$('#message').html(msg);
+            		} 
+            	});  */
+            
+            return false;      
+    });
+});
+
+</script>
+</head>
+<body>
+    <form>  <!-- 기존에 form태그 안에서 서버와 연결했던 것은 동기적 방식이기 때문에 지금은 비동기적 방식을 위해 $.ajax함수 형태를 썼다. -->
+    <label> 이름을 입력하세요 : </label>  
+    <input type="text" name="username" class="username"/>  <br/>
+    <input type="button" id="submit"  value="전송"/>  
+  </form>  
+  <div id="message"></div>
+</body>
+</html>
+
+

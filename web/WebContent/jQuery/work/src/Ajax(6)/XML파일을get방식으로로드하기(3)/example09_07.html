@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>XML 파일을 GET 방식으로 로드하기</title>
+<style>
+td { border: 1px solid gray;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+/*
+	- $.get() 함수를 이용해서 item.xml 파일을 불러온다.
+    - $.get() 함수의 첫번째 매개변수에는 서버의 URL 주소를 지정한다.
+	- $.get() 함수의 두번째 매개변수인 콜백함수를 이용해서 서버에서 보내온 XML 형식의 데이터를 data 로 받늗다.
+*/
+
+$(function() {
+	 $.get('item.xml', function(data) {
+		 	//alert(data); 한번에 가져오지 못함. [object XML document]만 뜬다. 따라서 자료를 따로 불러오는 방식으로 출력해야한다.
+             $("#treeData").append(
+                    "<tr><td>id</td>" + "<td>name</td>" 
+                  + "<td>price</td>" + "<td>description</td>" + "</tr>"); //1행의 각열에 값의 제목을 넣었다.
+             $(data).find('item').each(function() {			// 서버에서 얻어온 데이터에서 find()함수로 item태그를 찾는다.
+            	 var $item = $(this);						   // 6개의 item태그중 현재 처리중인 item태그를
+                 $("#treeData").append("<tr>" + "<td>"        // this로 접근한 후에 이를 $(this)를 사용하여 jQuery객체를        
+                         + $item.attr("id") + "</td>" + "<td>" //생성함. td태그 사이에 $item.attr("속성명")를 넣어 각 열을 생성함.
+                         + $item.attr("name") + "</td>" + "<td align='right'>"
+                         + $item.find("price").text() + "</td>" + "<td>" //td태그 사이에 price태그를 모두 찾고 그중에 텍스트값만 받아 출력.
+                         + $item.find("description").text() + "</td>" + "</tr>");//td태그 사이에 description태그를 모두 찾고 그중에 텍스트값만 받아 출력.
+             });
+    });//get end
+});
+</script>
+</head>
+<body>
+  <table id="treeData"></table>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<script language="javascript">
+<!--
+	function getCookie( name )
+	{
+	  var nameOfCookie = name + "=";
+	  var x = 0;
+	  while ( x <= document.cookie.length )
+	  {
+	    var y = (x+nameOfCookie.length);
+	    if ( document.cookie.substring( x, y ) == nameOfCookie ) {
+	      if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )
+	        endOfCookie = document.cookie.length;
+	      return unescape( document.cookie.substring( y, endOfCookie ) );
+	    }
+	    x = document.cookie.indexOf( " ", x ) + 1;
+	    if ( x == 0 )
+	      break;
+	  }
+	  return "";
+	}
+	
+	function openWindow() {      
+	
+	  // 쿠키가 발행되지 않았으면
+	  if (getCookie( "Notice" ) != "done" ){ //"Notice" : 변수명이다
+	     noticeWindow =  window.open('popup.html', 'Notice', 'width=370,height=400,resizable=no,scrollbars=yes,top= window_top,left=0');
+	     noticeWindow.opener = self;
+	  }
+/*
+	  if (getCookie( "Notice1" ) != "done" ){
+	     campWindow =  window.open('./test.html', 'Notice1', 'width=370,height=480,resizable=no,scrollbars=yes,top= window_top,left=380');
+	     campWindow.opener = self;
+	  }
+*/
+	/*  
+      if (getCookie( "Notice2" ) != "done" ){
+	     campWindow =  window.open('/notice/popup/iis/iij.htm', 'Notice2', 'width=420,height=360,resizable=no,scrollbars=no,top= window_top,left=380');
+	     campWindow.opener = self;
+	  }
+      
+
+	  if (getCookie( "Notice3" ) != "done" ){
+	     campWindow =  window.open('/notice/popup/notice3.html', 'Notice3', 'width=520,height=275,resizable=no,scrollbars=yes,top= window_top,left=380');
+	     campWindow.opener = self;
+	  }
+      
+      if (getCookie( "Notice4" ) != "done" ){
+	     campWindow =  window.open('/notice/popup/notice4.html', 'Notice4', 'width=480,height=350,resizable=no,scrollbars=no,top= window_top,left=0');
+	     campWindow.opener = self;
+	  }
+      */
+	}
+</script>
+</head>
+<body onLoad="openWindow();">
+popup Open
+</body>
+</html>

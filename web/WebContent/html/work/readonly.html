@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+readonly, disabled 속성
+공통점: 입력 양식의 값을 수정할 수 없도록 비활성화 시켜주는 역할
+차이점: readonly 속성으로 설정된 양식의 값은 action으로 설정된 페이지로 값이 전달됨.
+	  disabled 속성으로 설정된 양식의 값은 action으로 설정된 페이지로 값이 전달 안됨.
+ -->
+<form action="readonly.jsp"> <!--form에  method 속성이 생략되면 기본전송방식은 get방식이다 -->
+	<input type="hidden" name="myid" value="1234"> <!-- 화면에 보이지는 않지만 파일에서 파일로 값이 내부적으로 전달됨 -->
+	<input type=text name="myid01" value="1234" readonly="readonly"> <br>
+	<!-- readonly.jsp 페이지로 1234값이 넘어감 -->
+	<input type=text name="myid02" value="1234" disabled="disabled"> <br>
+	<!-- readonly.jsp 페이지로 1234값이 넘어가지 않아 null로 나옴 -->
+	<input type="submit" value="전송">
+
+
+</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+
+</head>
+<body>
+
+<!-- html주석 -->
+<!-- 자바스크립트 주석
+1. 단일행 주석: //
+2. 다중행 주석:/*  */ 단축키: ctrl+shift+/
+ -->
+<script>
+	/*Hello World~!!*/ 
+	/* 출력 안됨X 브라우저 상에서 처리되기 때문에 에러메세지도 없음
+	따라서 브라우저 상의f12를 눌러 확인가능 */
+	document.write("처음 작성하는 자바스크립트<br>");
+	/*document는 내장 객체이기 때문에 따로 선언하고 안써도 됨. 원래는 window.document로 해야함. 문서에 관련된 내장 객체
+	.write는 document객체가 지닌 메소드 ""또는 ''가능. 또한 ; 해도되고 안해도 됨.
+	자바 스크립트는 함수를 정의 할때 head 태그에 작성하고 body태그로 받아야한다.인터프리트 방식(위에서 부터 한줄씩 처리됨)
+	함수를 정의할때 빼고는 head 태그 body태그 그 이외의 위치 상관없이 처리가능*/
+	
+	document.write("처음 작성하는 자바스크립트1"+"<br>");
+	document.write("처음 작성하는 자바스크립트2"+'<br>');
+	document.write("처음 작성하는 자바스크립트3<br>");
+	/* 같은 내용 2개이상을 줄을 바꿔 작성했지만 브러우저상에 출력될 때 줄이 바뀌지 않음
+	      따라서 <br>태그를 입력해줘야함.단,따옴표 안에 넣어야함 밖에 쓰면 오류발생*/
+</script>
+
+<script type="text/javascript">
+	document.write("처음 작성하는 자바스크립트4<br>")
+</script>
+
+<script language="javascript">
+	document.write("처음 작성하는 자바스크립트5")
+</script>
+
+
+
+</body>
+</html>

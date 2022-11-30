@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+	//키보드로 정수 2개를 입력 받아서 최대값, 최소값을 구하는 프로그램을 작성하세요?
+	var n1 = prompt("정수 1을 입력하세요?");
+	var n2 = prompt("정수 2을 입력하세요?");
+	document.write(typeof(n1)+"<br>"); //string
+	document.write(typeof(n2)+"<br>"); //string
+	
+	var max, min;
+	
+	//Number() : 문자를 숫자로 변환해주는 함수
+	var n1 = Number(n1); //Number("30") --> 30
+	var n2 = Number(n2); //Number("3.14") --> 3.14
+	//엄밀히 말하면 이렇게 문자형을 숫자형으로 변환해서 해야함. 그러나 안해도 연산이 가능한 상황이 발생 
+	//물론 안되는 상황도 있기 때문에 주의할점도 있어야 한다.
+	
+	if(n1 > n2){  //문자형 변수끼리 비교 연산을 통해 연산 가능
+		max = n1;
+		min = n2;
+	}else{
+		max = n2;
+		min = n1;
+	}
+
+	document.write("max="+ max + "<br>");
+	document.write("min="+ min + "<br>");
+
+</script>
+
+
+
+</body>
+</html>

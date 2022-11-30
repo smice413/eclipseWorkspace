@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>location객체</title>
+</head>
+<body>
+<script>
+	document.write("href:"+location.href+"<br>"); 		  //현재문서의 위치확인
+	document.write("hash:"+location.hash+"<br>");
+	document.write("hostname:"+location.hostname+"<br>"); //localhost
+	document.write("host:"+location.host+"<br>");         //localhost
+	document.write("protocol:"+location.protocol+"<br>"); //http:
+	
+	function call(){
+		alert("호출성공");
+		location.reload();	//새로고침
+	}
+</script>
+
+	<input type="button" value="호출" onClick="call()">
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열</title>
+</head>
+<body>
+
+<script>
+	// 배열
+
+	// 방법1. 값이 정해져 있지 않을 때 객체만 생성하고 따로 값을 넣음
+	var a1 = new Array(); //배열 객체 생성. 대소문자 구분
+	a1[0] = 80;
+	a1[1] = 90;
+	a1[2] = 70;
+	
+	//length : 배열의 크기를 구해주는 속성
+	for(var i=0; i<a1.length; i++){
+		document.write(a1[i]+"\t"); //\t: 수평 간격 벌리기
+	} // 80 90 70
+	document.write("<br>");
+	
+	// 방법2. 값이 정해져 있을 때 초기값 바로 설정함
+	var a2 = new Array(80, 90, 70);
+	
+	for(var i=0; i<a2.length; i++){
+		document.write(a2[i]+"\t"); //\t: 수평 간격 벌리기
+	} // 80 90 70
+	document.write("<br>");
+	
+	// 방법3. 값이 정해져 있을 때 쓸 수 있는 형식
+	var a3 = [80, 90, 70];
+	
+	for(var i=0; i<a2.length; i++){
+		document.write(a2[i]+"\t"); //\t: 수평 간격 벌리기
+	} // 80 90 70
+	document.write("<br>");
+	
+	
+</script>
+</body>
+</html>

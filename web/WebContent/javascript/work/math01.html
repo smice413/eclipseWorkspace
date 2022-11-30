@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Math 객체</title>
+</head>
+<body>
+<script>
+	// Math 객체
+	
+	var num = 2.5234;
+	
+	document.write("PI="+ Math.PI+"<br>"); //PI=3.141592653589793
+	document.write("오일러 상수="+ Math.E + "<br>"); //오일러 상수=2.718281828459045
+
+	document.write("절대값="+Math.abs(-30)+"<br>"); //30
+ 	//자바스크립트에서는 자바와 달리 최대값과 최소값 자리에 여러개 넣어도 된다.
+	document.write("최대값="+Math.max(10,5,8,30,50)+"<br>"); //50
+	document.write("최소값="+Math.min(10,5,8,30,50)+"<br>"); //5
+	document.write("올림="+Math.ceil(num)+"<br>"); //3 소수 첫째자리에 어떤 수가 와도 올림
+	document.write("반올림="+Math.round(num)+"<br>"); //3 
+	document.write("내림="+Math.floor(num)+"<br>"); //2 
+	document.write("난수="+Math.random(num)+"<br>"); //0~1사이의 난수 발생. 난수=0.948247262828501
+	document.write("거듭제곱="+Math.pow(2,3)+"<br>"); //2의 3승 = 8
+	document.write("제곱근="+Math.sqrt(9)+"<br>"); //루트 9 = 3
+	
+</script>
+</body>
+</html>

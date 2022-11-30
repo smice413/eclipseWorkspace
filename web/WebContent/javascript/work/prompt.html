@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+	/* var name = window.prompt(); */
+	   var name = prompt("이름을 입력하세요?",""); //두번째 자리에 있는 것은 초기값이다. "홍길동"을 넣으면 초기화면부터 입력되어 있다.
+	   document.write("당신의 이름은 "+ name+"<br>");
+	   document.write(typeof(name)+"<br>"); //string(키보드로 입력한 값이 숫자여도 string형으로 뜬다)
+</script>
+
+<script>
+	var age = prompt("나이를 입력 하세요?",""); //age = "25";
+	alert(typeof(age)); //string
+	if(age >= 20){ //age가 string형으로 인식됨에도 불구하고 크기 대수를 비교할 수 있다.
+		alert("당신은 성인 입니다.");//그래서 "당신은 성인 입니다."가 출력된다.
+	}else{
+		alert("당신은 미성년자 입니다.");
+	}
+
+</script>
+
+
+
+</body>
+</html>

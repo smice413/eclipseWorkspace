@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Google Map</h1>
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {  // 37.4965202,127.0279245
+  center:new google.maps.LatLng(37.497975, 127.027506), //강남역이 센터(가운데)위치로 지정됨. LatLng(위도값, 경도값) 위도 경도값은 구글지도 검색하여 지도상에 클릭하면 url에 값이 나타남.
+  zoom:16, //맵크기										//key value값
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);//div태그를 불렀고 그 위치에 지도가 표시되도록 하였다.
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEM3FEmY5ecJzAkXH9TDRAs1MaXpSWtME&callback=myMap"></script>
+			<!-- "https://maps.googleapis.com/maps/api/js?key= 여기까지 정해진 소스코드 이며 그 이후는 키를 발급받아야 하는 것.이 키는 웹용으로 인증받은 것.
+				 그리고 &callback=myMap으로 위의 함수로 콜백되도록 함. -->
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿* jQuery UI
+
+  jQuery UI는 인터렉티브한 웹을 제공할 수 있도록 하는 인터페이스 
+  개발 도구
+
+  jQuery UI는 애니메이션 효과, 위젯을 쉽게 사용할 수 있도록 
+  있도록 탭을 만들거나 경고 창을 띄우는 등의 효과를 줄 수 있다.
+
+
+  - jQuery UI 관련 웹 사이트
+    http://jqueryui.com
+
+  - jQuery UI 데모 사이트
+    http://jquery.com/demos
+
+
+
+  - jQuery UI에서 제공하는 기능
+
+    i. 인터렉션(Interaction)
+       - Draggable
+       - Droppable
+       - Resizable
+       - Selectable
+       - Sortable
+
+    ii. 위젯(Widgets)
+	- Accordion
+	- Autocomplate
+        - Button
+	- Datepicker
+	- Dialog
+	- Progressbar
+	- Slider
+	- Tabs
+
+     iii. 유틸리티(Utilities)
+	  - Position
+
+     iv. 이펙트(Effects)
+	 - Effect
+	 - Show
+	 - Hide
+	 - Toggle
+	 - Color animation
+	 - Add class, Remove class, Toggle class, Switch class
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>submit이벤트</title>
+<script>
+	function check(){
+		var name = document.getElementById("name");
+		var email = document.getElementById("email");
+		
+		if(name.value == ""){
+			alert("이름을 입력하세요.");
+			name.focus();
+			return false;//check() 함수를 빠져나가는 역할
+		}
+		if(email.value == ""){
+			alert("email주소를 입력하세요.");
+			email.focus();
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+
+<form method="post" action="send.jsp" onSubmit="return check()">
+	<!-- submit버튼은 form태그 안에 해야 한다. 또한 유효성검사 return false와 return check()까지 넣어줘야 페이지가 안넘어간다. -->
+	이름 : <input type=text id="name" name="name"><br>
+	이메일 : <input type=text id="email" name="email"><br>
+	<input type="submit" value="전송">
+	
+	
+</form>
+</body>
+</html>

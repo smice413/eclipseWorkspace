@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<SCRIPT LANGUAGE="JavaScript">
+
+function add(a){ // 숫자, 연산자 버튼 a="1"
+document.calc.inbox.value=document.calc.inbox.value+a
+}// value = document.calc.inbox.value+a(value값이 a이며
+//	a는 document.calc.inbox.value 이다. 따라서 a값을 넣을 때 마다 +a로
+//  계속 값을 value에 넣을 수 있다. value(a값이다)=1(a값이다)+(a값이다)2(a값이다)
+
+function calcu(){ // '=' 버튼
+document.calc.inbox.value=eval(document.calc.inbox.value)
+}
+
+function cle(){ // clear = 버튼
+document.calc.inbox.value=""
+}
+
+function sqrt(){//제곱근을 구해주는 함수
+document.calc.inbox.value=Math.sqrt(document.calc.inbox.value)	
+}
+
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM name="calc">
+<TABLE border="1">
+<TR>
+	<TD colspan=4><INPUT TYPE="text" NAME="inbox"></TD>
+	
+	
+</TR>
+<TR>
+	<TD><input type=button value="  7  " onclick=add("7")> </td>
+	<TD><input type=button value="  8  " onclick=add("8")> </TD>
+	<TD><input type=button value="  9  " onclick=add("9")> </TD>
+	<TD><input type=button value="  /  "onclick=add("/")> </TD>
+</TR>
+<TR>
+	<TD><input type=button value="  4  " onclick=add("4")> </TD>
+	<TD><input type=button value="  5  " onclick=add("5")> </TD>
+	<TD><input type=button value="  6  " onclick=add("6")> </TD>
+	<TD><input type=button value="  *  " onclick=add("*")> </TD>
+</TR>
+<TR>
+	<TD><input type=button value="  1  " onclick=add("1")> </TD>
+	<TD><input type=button value="  2  " onclick=add("2")> </TD>
+	<TD><input type=button value="  3  " onclick=add("3")> </TD>
+	<TD><input type=button value="  -  " onclick=add("-")> </TD>
+</TR>
+<TR>
+	<TD><input type=button value="  0  " onclick=add("0")> </TD>
+	<TD><input type=button value="  .  " onclick=add(".")> </TD>
+	<TD><input type=button value=" sqrt "onclick=sqrt()> </TD>
+	<TD><input type=button value="  +  " onclick=add("+")> </TD>
+</TR>
+<TR align="center">
+	<TD colspan="2"><input type=button value="    =    " onclick="calcu()"> </TD>
+	<TD colspan="2"><input type=button value="  Clear  " onclick="cle()"> </TD>
+	
+</TR>
+</TABLE>
+</FORM>
+
+</BODY>
+</HTML>

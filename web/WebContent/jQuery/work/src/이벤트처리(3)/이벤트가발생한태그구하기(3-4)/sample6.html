@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+		<title>sample6</title>
+		<script src="jquery-1.6.4.min.js"></script>
+
+		<script type="text/javascript">
+// $(this)
+// 1. 이벤트가 발생한 태그를 얻어오는 셀렉터가		   $(this)
+// 2. click 이벤트만 사용할 수 있다.
+
+
+// img 태그의 src 속성과 title 속성을 attr()함수로 설정함
+// 클릭한 태그의 href 속성을 $(this).attr("href")로 구함.
+// 클릭한 태그안의 텍스트를 $(this).text()로 구함.
+// $(this) : 이벤트를 발생시킨 태그를 구하는 함수 
+		$(function(){
+
+			$("a").click(function(){
+			//$(this): 이벤트를 발생시킨 a태그를 구해옴
+	$("img").attr("src",$(this).attr("href")) //href속성 값을 구해옴
+			.attr("title",$(this).text());//a태그의 글자 구해옴
+				return false; //링크가 실행되지 않도록 막음. 이미지만 구해오게 만듬
+			});
+
+		});
+
+		</script>
+	</head>
+	<body>
+	<ul>
+		<li><a href="flower.jpg">꽃</a></li>
+		<li><a href="sea.jpg">바다</a></li>
+		<li><a href="Jellyfish.jpg">해파리</a></li>
+		<li><a href="building.jpg">건물</a></li>
+	</ul>
+	<p><img src="flower.jpg" title="꽃" /></p>
+	
+	</body>
+</html>

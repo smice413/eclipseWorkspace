@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Absolute Position</title>
+    <style>
+        /* 초기화 */
+        * { margin: 0; padding: 0; }
+
+        /* 주제 */
+        body { background: red; }
+        #container {
+            /* 색상 및 크기 적용 */
+            width: 500px; height: 250px;
+            background: orange;
+
+            /* 위치 설정 */
+            position: absolute;
+            left: 50%; top: 50%; /* 가운데 배치 */
+            margin-left: -250px; /* 음수값을 입력하지 않으면 실제 가운데 배치가 안됨 따라서 왼쪽으로 이동하기 위해 음수값 입력 */
+            margin-top: -125px; /* 가운데 배치가 안되서 음수값을 입력하여 더 위로 올라가도록 조절함 */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>요소의 중앙 배치</h1>
+    </div>
+</body>
+</html>
