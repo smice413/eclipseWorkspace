@@ -1,0 +1,80 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<!-- header 파일 불러오기 -->
+ <%@ include file="header.jsp" %>     
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>게시판</title>
+</head>
+<body>
+
+<form method="post" action="board.jsp"> 
+<table border=1 width=500 align="center">
+	<caption>게시판</caption>
+	<tr>
+		<th>작성자</th>
+		<td><input type=text size=30 name="writer" id="writer"
+		           placeholder="작성자명 입력" value="홍길동"  >
+		           <!-- plaveholder: 입력란에 무엇을 써야할지 힌트를 주는 역할 
+		                value="홍길동" : 초기값을 홍길동으로 설정
+		                id 값은 name으로 전달한 값이 많을 때 구분하기 위함-->
+		</td>
+	</tr>
+	<tr>
+		
+		<th>비밀번호</th>
+		<td><input type="password" name="passwd" id="passwd"
+					placeholder="2~8자 이내 입력">
+		</td>
+	</tr>
+	<tr>
+		<th>제목</th>
+		<td><input type=text size=50 name="subject" id="subject"
+					placeholder="50자 이내로 입력">
+		</td>
+	</tr>
+	<tr>
+		<th>내용</th>
+		<td><textarea rows="5" cols="50" name="content" id="content"
+					  placeholder="200자 이내로 입력">내용입력</textarea>
+		<!--row=5를 주면 내용작성시 5줄이 넘어가도 계속 줄이 생성된다.
+		         단, 데이터가 저장되는 컬럼의 크기가 정해져 있기 때문에 유효성검사를 해야한다.
+		    value="내용입력" : 초기값으로 설정 못함 textarea는 value속성이 없기 때문
+		         따라서 textarea태그 사이에 '내용입력'을 작성해라. 또한 '내용입력'앞에 공백이 있으면 공백이
+		         같이 추가되기 때문에 공백을 없애고 넣어야한다.-->
+					  
+		</td>
+	</tr>
+	<tr>
+		<th>파일첨부</th>
+		<td><input type=file name="myfile" id="myfile"></td>
+		<!-- file 속성으로 파일첨부하는 버튼양식이 생김. 브라우저에 따라 양식이 다름 -->
+	</tr>
+	<tr>
+		<td colspan=2 align="center">
+			<input type=submit value="글작성1"> <!-- 전송기능 있는 버튼: 값을 입력하든 하지 않든 상관없이 전송함
+													                            여러개를 만들어도 하는 역할이 동일해서 1개만 만들어라 -->
+			<input type="button" value="글작성2"><!-- 전송 기능 없는 버튼: 여러개 만들어도 상관없다 -->
+			
+			<button>글작성3</button> <!-- button 태그: 전송기능 있는 버튼  -->
+			<button type="submit">글작성4</button> <!-- 전송기능 있는 버튼  -->
+			<button type="button">글작성5</button> <!-- 전송기능 없음 -->
+			
+		
+			<input type="reset" value="취소"> <!-- 초기화 버튼 -->
+			<button type="reset">초기화</button> <!-- 초기화 버튼 -->
+		</td>
+	</tr>
+</table>
+</form>
+
+
+</body>
+</html>
+
+<!-- footer 파일 불러오기 -->
+<%@ include file="footer.jsp" %>
