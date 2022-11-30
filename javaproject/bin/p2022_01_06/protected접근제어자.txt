@@ -1,0 +1,14 @@
+﻿src - packTest - packOne -  AccessTest.java(부모클래스)
+
+		             private      int a=10;          
+  		                	   int b=20;  
+  		             protected   int c=30;  
+  		             public       int d=40;
+
+
+
+
+       SubOne.java(자식클래스) : protected, public만 접근가능
+
+
+       SuperSubA.java(제3의 클래스) : public만 접근가능    

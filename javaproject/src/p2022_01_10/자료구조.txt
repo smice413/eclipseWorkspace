@@ -1,0 +1,47 @@
+﻿* 자료구조(collection)
+   java.util.*;
+
+   ex) Set, List, Vector, Map, Queue, Stack etc
+
+i. Set 인터페이스 - HashSet, TreeSet (상속받는 클래스)
+
+   1. 여러가지 자료형의 Data를 모두 저장할 수 있다.
+      ex) int, double, char, boolean, String etc
+   2. 순서없이 입.출력 한다.
+   3. 중복된 Data를 저장하지 못한다.
+
+
+ii. List 인터페이스 - ArrayList (상속받는 클래스)
+
+    1. 여러가지 자료형의 Data를 모두 저장할 수 있다.
+      ex) int, double, char, boolean, String etc
+    2. 순서있는 입.출력 처리(index번호 순으로 저장됨)
+    3. 중복된 Data를 저장 할 수 있다.
+
+
+iii. Vector 클래스
+
+     1.여러가지 자료형의 Data를 모두 저장할 수 있다.
+      ex) int, double, char, boolean, String etc
+     2. 순서있는 입.출력 처리(index번호 순으로 저장됨)
+     3. 중복된 Data를 저장 할 수 있다.
+
+
+iv. Map 인터페이스  - HashMap, HashTable (상속받는 클래스)
+    1. 여러가지 자료형의 Data를 모두 저장할 수 있다.
+      ex) int, double, char, boolean, String etc
+    2. Data를 저장할 때 Key, Value 를 동시에 저장한다.
+
+
+v. 큐(Queue) 인터페이스 - LinkedList (상속받는 클래스)
+   1. FIFO(First Input First Output) 구조
+      먼저 입력된 자료가 먼저 출력되는 구조
+
+
+vi. 스택(Stack) 클래스
+   1.  LIFO(Last Input First Output) 구조
+       마지막으로 입력된 자료가 가장 먼저 출력되는 구조
+       휴지통에 쌓인 쓰레기 순서 같음
+
+
+

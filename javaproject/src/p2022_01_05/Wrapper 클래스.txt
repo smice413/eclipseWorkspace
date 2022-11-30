@@ -1,0 +1,42 @@
+* Wrapper 클래스
+주로 자료형 변환을 사용 할때 많이 쓴다.
+
+자바의 기본 데이터형            	Wrapper 클래스
+boolean				Boolean
+byte				Byte
+short				Short
+int				    Integer
+long				Long
+float				Float
+double				Double
+char				Character
+
+(각 자료형들이 제공은 되지만 거의 int형만 쓴다. Integer가 중요 - 90%이상 Integer 사용)
+
+ex) 20이란 문자를 숫자 20으로 변환을 시킬 때
+"20"  --->  20
+ 
+방법1.
+	int num = Integer.parseInt("20");
+
+방법2.
+	Integer in01 = new Integer("20");		
+	int num01 = in01.intValue();		//언박싱
+
+
+
+20  --->  "20"
+방법1.
+	String s = String.valueOf(20);
+
+방법2.
+	Integer in = new Integer(20);
+	String s = in.toString();      
+
+방법3.    20 -->  20 + ""
+     
+
+
+
+
+

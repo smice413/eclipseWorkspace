@@ -1,0 +1,10 @@
+* 제네릭(Generic)           JDK 5.x
+
+
+Vector  v = new Vector();
+
+Vector<String>  v = new Vector<String>();
+
+Vector<Integer>  v = new Vector<Integer>();
+
+Vector<Double>  v = new Vector<Double>();

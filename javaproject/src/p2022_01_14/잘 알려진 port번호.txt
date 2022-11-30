@@ -1,0 +1,17 @@
+﻿* 잘 알려진 port번호
+
+ftp : 21
+
+ssh : 22
+
+telnet : 23
+
+http(웹서비스) : 80    ex)http://www.naver.com;80
+
+smtp(메일 송신): 25
+
+pop3(메일 수신) : 110
+
+
+IPv4: 8bit.8bit.8bit.8bit = 32bit = 각 8bit의 자리를 옥텟(Octet)이라고 한다.
+8bit(00000000)~8bit(11111111)로 구성 10진수로 바꾸면 0~255가 됨. 

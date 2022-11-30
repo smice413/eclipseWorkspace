@@ -1,0 +1,20 @@
+추상클래스: abstract clss  AbsClass{
+	        abstract void draw();
+    	    }
+
+
+class Tri  extends AbsClass{          
+   void draw(){  
+    }
+}     
+                  
+class  Rect extends AbsClass{
+     void draw(){
+    }
+}  
+
+class Cicle extends AbsClass{                        
+      void draw(){
+    }	
+}
+
