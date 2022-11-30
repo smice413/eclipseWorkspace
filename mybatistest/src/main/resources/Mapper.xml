@@ -1,0 +1,46 @@
+ <?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="#package.#mapperinterfacename">
+	<!-- 태그들 마다 id값을 따로 해야한다.DAO에서 SQL문을 호출할 때 사용해야하기 때문 -->
+	<!-- parametertype은 SQL문에 전달되는 자료형을 쓰고 resulttype은 select태그만 쓴다. 또한 검색한 결과를 돌려줘할 자료형을 resulttype에 써야함 -->
+	<select id="getSomething" parameterType="int" resultType="#package.#modelname">
+		SELECT
+		columnname1,
+		columnname2,
+		columnname3
+		FROM tablename1
+		WHERE columnname1 = #{value}
+	</select>
+
+	<!-- resultmap은 select SQL문으로 검색하는 컬럼명과 DTO에 있는 프로퍼티명이 다를 경우 쓴다. -->
+	<resultMap type="#modelname" id="YourResultSet">
+		<id property="param1" column="columnname1" />
+		<result property="param2" column="columnname2" />
+		<result property="param3" column="columnname3" />
+	</resultMap>
+
+	<select id="getAll" resultMap="YourResultSet">
+		SELECT * FROM tablename1
+	</select>
+<!-- parametertype에 DTO클래스명과 같다면 alias를 설정했을 때 DTO클래스명만 쓰고 alias가 없다면 패키지부터 클래스명까지 경로를 다써야함 -->
+	<insert id="insertSomething" parameterType="#modelname">
+		INSERT INTO tablename1 (columnname1, columnname2, columnname3)
+		VALUES(#{value1},#{value2},#{value3})
+	</insert>
+
+	<update id="updateSomething" parameterType="#modelname">
+		UPDATE tablename1
+		SET
+		columnname1=#{param1}
+		WHERE
+		columnname2 = #{param2}
+	</update>
+
+	<delete id="deleteSomething" parameterType="int">
+		DELETE FROM tablename1 WHERE
+		columnname1 = #{param1}
+	</delete>
+
+</mapper>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties resource="db.properties" />
+	<typeAliases>
+			<!-- DTO클래스를 패키지부터 클래스명까지 써야함 클래스가 여러개 이면 여러개 작성해야함 -->	
+		<typeAlias type="#package.#modelname" alias="#modelname"></typeAlias>
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+			<!-- db.properties파일 안에 있는 변수를 쓰는 것. 파이을 따로 만들지 말고 변수 값을 직접 써된다. -->
+				<property name="driver" value="${jdbc.driverClassName}" />
+				<property name="url" value="${jdbc.url}" />
+				<property name="username" value="${jdbc.username}" />
+				<!-- <property name="username" value="scott" /> 이런식으로 바로 써도됨-->
+				<property name="password" value="${jdbc.password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<!-- resource 폴더 기준으로 경로를 쓰면됨  -->
+		<mapper resource="#package/#mapper.xml" />
+	</mappers>
+</configuration>
